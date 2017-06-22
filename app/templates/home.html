@@ -1,1 +1,8 @@
-<h1>Home Page</h1>
+<!-- home is defined in app.js state -->
+
+<h1>{{ home.title }}</h1>
+<h3 ng-repeat="room in home.rooms">{{ room.$value }}</h3>
+
+
+
+<!-- checkpoint 3 ng-model and ng-submit for forms -->
