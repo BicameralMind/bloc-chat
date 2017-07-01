@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    
+}
+
+h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 70px;
+    padding: 0px;
+    color: white;
+    text-shadow:     0 1px 0 hsl(174,5%,80%),
+                     0 2px 0 hsl(174,5%,75%),
+                     0 3px 0 hsl(174,5%,70%),
+                     0 4px 0 hsl(174,5%,66%),
+                     0 5px 0 hsl(174,5%,64%),
+                     0 6px 0 hsl(174,5%,62%),
+                     0 7px 0 hsl(174,5%,61%),
+                     0 8px 0 hsl(174,5%,60%),
+    
+                     0 0 5px rgba(0,0,0,.05),
+                    0 1px 3px rgba(0,0,0,.2),
+                    0 3px 5px rgba(0,0,0,.2),
+                   0 5px 10px rgba(0,0,0,.2),
+                  0 10px 10px rgba(0,0,0,.2),
+                  0 20px 20px rgba(0,0,0,.3);
+    margin-top: auto;
+    margin-bottom: 15px;
+/*    text-shadow: 0 0 5px #0095DD;*/
+}
+
+h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    color: darkslategray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#chatBar {
+    background-color: #eee;
+/*    #becccc*/
+    padding: 15px;
+    min-height: 100%;
+    position: absolute;
+}
+
+.textBox {
+    padding: 10px;
+    border: solid 1px #fff;
+    box-shadow: inset 1px 1px 2px 0 #707070;
+    transition: box-shadow 0.3s;
+    font-size: 30px;
+    max-height: 20px;
+    max-width: 170px;
+    font-family: 'Teko', sans-serif;
+    margin-bottom: 20px;
+}
+
+.textBox input:focus,
+.textBox input.focus {
+    box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+
+.button {
+    color: white;
+    text-shadow: -2px 2px #2E2D2F;
+    
+    background: #5f5c60; 
+    background: -webkit-linear-gradient(#858287, #5f5c60); 
+    background: -o-linear-gradient(#858287, #5f5c60); 
+    background: -moz-linear-gradient(#858287, #5f5c60); 
+    background: linear-gradient(#858287, #5f5c60); 
+    
+    
+    box-shadow: inset 0 0 0 1px #2E2D2F;
+    border: none;
+    border-radius: 15px;
+    
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding: 15px;
+    font-size: 35px;
+    font-family: "Teko",serif;
+    line-height: .75;
+    appearance: none;
+
+}
+
+.button:focus {
+    outline: none
+}
+
+.button:hover,
+.button.hover {
+    box-shadow: inset 0 0 0 1px #2E2D2F,0 5px 15px #2E2D2F;
+}
+
+.button:active,
+.button.active {
+    box-shadow: inset 0 0 0 1px #2E2D2F,inset 0 5px 30px #2E2D2F;
+}
+
+/*
+
+.button {
+    display: inline-block;
+    padding: 10px 10px 5px 10px;
+    background-color: #2e2d2f;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(hsla(280, 2%, 37%, 1)), to(hsla(280, 2%, 37%, 1)));
+    background-image: -webkit-linear-gradient(hsla(280, 2%, 37%, 1), hsla(280, 2%, 37%, 1));
+    background-image: -moz-linear-gradient(hsla(280, 2%, 37%, 1), hsla(280, 2%, 37%, 1));
+    background-image: -o-linear-gradient(hsla(280, 2%, 37%, 1), hsla(280, 2%, 37%, 1));
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    -moz-box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, .15);
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    line-height: 1;
+    text-shadow: 0 -1px 1px rgba(46, 45, 47, 1);
+    -webkit-transition: background-color .2s ease-in-out, -webkit-transform .1s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out, -moz-transform .1s ease-in-out;
+    -o-transition: background-color .2s ease-in-out, -o-transform .1s ease-in-out;
+    transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+    color: #fff;
+        display: inline-block;
+    
+    
+    -webkit-box-shadow:    0 8px 0 #312f31, 0 15px 20px rgba(0, 0, 0, .35);
+    -moz-box-shadow: 0 8px 0 #312f31, 0 15px 20px rgba(0, 0, 0, .35);
+    box-shadow: 0 8px 0 #312f31, 0 15px 20px rgba(0, 0, 0, .35);
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    -moz-transition: -moz-box-shadow .1s ease-in-out;
+    -o-transition: -o-box-shadow .1s ease-in-out;
+    transition: box-shadow .1s ease-in-out;
+    
+    margin-bottom:  20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #5c5a5e;
+    text-shadow: 0 -1px 1px rgba(92, 90, 94, 1), 0 0 5px rgba(255, 255, 255, .8);
+}
+
+.button:active, .button:focus {
+    -webkit-box-shadow:    0 8px 0 #312f31, 0 12px 10px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 8px 0 #312f31, 0 12px 10px rgba(0, 0, 0, .3);
+    box-shadow:    0 8px 0 #312f31, 0 12px 10px rgba(0, 0, 0, .3);
+    
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+
+.button:active input {
+    -webkit-transform: translate(0, 4px);
+    -moz-transform: translate(0, 4px);
+    -o-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+}
+
+*/
