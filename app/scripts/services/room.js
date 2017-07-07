@@ -10,9 +10,18 @@
             //use the firebase method $add here
             rooms.$add({
                 name: room
+                
             })
             
         }
+        
+        
+        
+        
+        console.log(Room.all);
+        
+        
+        
 
         return Room;
         
