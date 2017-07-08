@@ -4,6 +4,8 @@
         this.rooms = Room.all;
         
         this.newRoom = "Create Room";
+        this.newUser = "Enter Username";
+        this.addUser = User.addUser;
         
         this.addRoom = Room.addRoom;
         this.displayRoom = Room.displayRoom;
@@ -11,7 +13,6 @@
         //messages
         this.messages = null;
         
-        //this.currentRoom = Room.currentRoom;
         this.currentRoom = "Please select a room";
         
         //console.log(this.currentRoom);
@@ -33,5 +34,5 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', 'Message', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', "$cookies", HomeCtrl]);
 })();

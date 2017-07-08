@@ -15,13 +15,7 @@
             
         }
         
-        
-        
-        
         console.log(Room.all);
-        
-        
-        
 
         return Room;
         

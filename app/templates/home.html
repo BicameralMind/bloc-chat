@@ -1,13 +1,17 @@
 <!-- home is defined in app.js state -->
 <div id="chatBar">
     <h1 id="logo">{{ home.title }}</h1>
-    <form ng-submit="home.addRoom(home.roomName)">
-        <input class="textBox" ng-model="home.roomName" type="text"><br>
-        <input class="button" type="submit" value="{{ home.newRoom }}">
-        
+    <form ng-submit="home.addUser(home.user)">
+        <input class="textBox" ng-model="home.user" type="text"><br>
+        <input class="button" type="submit" value="{{ home.newUser }}">
     </form>
     
     <h3 ng-repeat="room in home.rooms" ng-click="home.displayRoom(room)">{{ room.name }}</h3>
+    
+    <form ng-submit="home.addRoom(home.roomName)">
+        <input class="textBox" ng-model="home.roomName" type="text"><br>
+        <input class="button" type="submit" value="{{ home.newRoom }}"> 
+    </form>
 </div>    
 
 <div id="roomBar" >
