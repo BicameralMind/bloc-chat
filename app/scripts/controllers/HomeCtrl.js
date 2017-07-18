@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room, Message) {
+    function HomeCtrl(Room, Message, User) {
         this.title = "Bloc Chat"
         this.rooms = Room.all;
         
@@ -9,6 +9,8 @@
         
         this.addRoom = Room.addRoom;
         this.displayRoom = Room.displayRoom;
+        
+        this.currentUser = User.currentUser;
         
         //messages
         this.messages = null;
@@ -22,7 +24,7 @@
             this.currentRoom = current.name;
             // request the messages for the new room's id and show them in the view
             this.messages = Message.getByRoomId(current.$id);
-            console.log(current);
+            console.log(current.name);
         }
         
         //this and $scope are similar
@@ -34,5 +36,5 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', 'Message', "$cookies", HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', 'BlocChatCookies', HomeCtrl]);
 })();

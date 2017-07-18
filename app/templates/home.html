@@ -16,6 +16,7 @@
 
 <div id="roomBar" >
     <h1>{{ home.currentRoom }}</h1>
+    <h4>Logged in as: {{ home.currentUser() }}</h4>
 </div>
 <div class="messages" ng-repeat="message in home.messages" ng-class-odd="'odd'">
         <p><strong>{{ message.username }}</strong> <span id="time">{{ message.sentAt }}</span></p>

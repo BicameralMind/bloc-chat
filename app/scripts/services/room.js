@@ -12,7 +12,6 @@
                 name: room
                 
             })
-            
         }
         
         console.log(Room.all);
