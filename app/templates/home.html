@@ -16,17 +16,17 @@
 
 <div id="roomBar" >
    <h2>Logged in as: {{ home.currentUser() }}</h2>
-    <h1>{{ home.currentRoom }}</h1>
+    <h1>{{ home.currentRoom.name }}</h1>
     
 </div>
 <div class="messages" ng-repeat="message in home.messages" ng-class-odd="'odd'">
-        <p><strong>{{ message.username }}</strong> <span id="time">{{ message.sentAt }}</span></p>
+        <p><strong>{{ message.username }}</strong> <span id="time">{{ message.sentAt | date: 'longDate' }}</span></p>
         <p>{{ message.content }}</p>
         
         
 </div>
 
-<form class="sendForm" ng-submit="home.send(home.sendMessage, home.currentRoom)">
+<form class="sendForm" ng-submit="home.send(home.sendMessage, home.currentRoom.$id, home.currentUser())">
     <input class="sendBox" ng-model="home.sendMessage" type="text">
     <input class="button2" type="submit" value="{{ home.sendButton }}"> 
 </form>

@@ -17,19 +17,14 @@
         
         this.currentRoom = "Please select a room";
         
-        this.currentRoomId = null;
-        
         //console.log(this.currentRoom);
         
         this.displayRoom = function(current){
             // set the current room to the clicked room
-            this.currentRoom = current.name;
+            this.currentRoom = current;
             // request the messages for the new room's id and show them in the view
             this.messages = Message.getByRoomId(current.$id);
-            
-            currentRoomId = current.$id;
             console.log(current.name);
-            console.log(currentRoomId);
         }
         
         this.send = Message.send;
